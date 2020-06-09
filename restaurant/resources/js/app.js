@@ -2,9 +2,9 @@ require('./bootstrap');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './components/IndexPage/Index';
+import App from './components/App';
 
-ReactDOM.render( 
-    <Index /> ,
+ReactDOM.render(
+    <App /> ,
     document.getElementById("root")
 );

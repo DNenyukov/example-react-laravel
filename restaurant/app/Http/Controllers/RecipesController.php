@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Recipes;
+use App\Models\Recipes;
 use Illuminate\Http\Request;
 
 class RecipesController extends Controller
@@ -14,7 +14,8 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        //
+        $recipes = Recipes::get();
+        return response()->json($recipes);
     }
 
     /**

@@ -1,18 +1,25 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Repices from './Repices';
 import Feedback from './Feedback';
 
 class Index extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            storage_url: props.storage_url,
+            recipes: props.recipes
+        }
+    }
+
     render() {
+        const storage_url = this.state.storage_url;
+        const recipes = this.state.recipes;
+
         return (
             <div>
-                <Header />
-                <Repices />
+                <Repices storage_url={storage_url} recipes={recipes}/>
                 <Feedback />
-                {/* <Footer /> */}
-
             </div>
         );
     }
